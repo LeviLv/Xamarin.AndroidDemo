@@ -2,6 +2,12 @@
 using Android.Widget;
 using Android.OS;
 using Android.Content;
+using System.Net;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Net.Security;
+using System.IO;
 
 namespace Xamarin.AndroidDemo
 {
@@ -13,7 +19,7 @@ namespace Xamarin.AndroidDemo
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-             SetContentView (Resource.Layout.Main);
+            SetContentView(Resource.Layout.Main);
 
             EditText Text = FindViewById<EditText>(Resource.Id.Txt_Tel);
             Button TrainBtn = FindViewById<Button>(Resource.Id.Btn_Train);
@@ -26,7 +32,7 @@ namespace Xamarin.AndroidDemo
             TrainBtn.Click += (object sender, System.EventArgs e) =>
             {
                 Number = PhoneTranslator.ToNumber(Text.Text);
-                if(!string.IsNullOrWhiteSpace(Number))
+                if (!string.IsNullOrWhiteSpace(Number))
                 {
                     CallBtn.Text = CallBtn.Text + Number;
                     CallBtn.Enabled = true;
