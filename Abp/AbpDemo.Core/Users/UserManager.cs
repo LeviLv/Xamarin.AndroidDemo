@@ -40,6 +40,6 @@ namespace AbpDemo.Users
                   settingManager,
                   userTokenProviderAccessor)
         {
-        }
+        }//
     }
 }
