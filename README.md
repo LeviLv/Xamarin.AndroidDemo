@@ -1,2 +1,0 @@
-# Xamarin.AndroidDemo
-Xamarin
